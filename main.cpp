@@ -20,11 +20,14 @@ using namespace std;
 int main()
 {
     Turupizza t;
-    t.pizzas.push_back(new Pizza("Margarita",2));
-    t.pizzas.push_back(new Pizza("Napolitana",4));
+    t.agregar("Margarita",2);
+    t.agregar("Napolitana",4);
+    t.agregar("Canadiense",6);
+    t.setCantidad("Margarita",65);
     t.escribir();
     t.leer();
     t.imprimir();
+    cout<<"Hay "<<t.getCantidad("Canadiense")<<" pizzas canadienses."<<endl;
 
 
 

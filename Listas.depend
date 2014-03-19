@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1395251815 source:/home/turupawn/Projects/Codeblocks/Archivos/main.cpp
+1395252777 source:/home/turupawn/Projects/Codeblocks/Archivos/main.cpp
 	<iostream>
 	<list>
 	<fstream>
@@ -35,10 +35,10 @@
 1395251389 source:/home/turupawn/Projects/Codeblocks/Archivos/Pizza.cpp
 	"Pizza.h"
 
-1395251714 source:/home/turupawn/Projects/Codeblocks/Archivos/Turupizza.cpp
+1395252818 source:/home/turupawn/Projects/Codeblocks/Archivos/Turupizza.cpp
 	"Turupizza.h"
 
-1395251836 /home/turupawn/Projects/Codeblocks/Archivos/Turupizza.h
+1395252254 /home/turupawn/Projects/Codeblocks/Archivos/Turupizza.h
 	<list>
 	<string>
 	<fstream>

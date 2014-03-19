@@ -19,6 +19,7 @@ class Turupizza
         void imprimir();
         int getCantidad(string nombre);
         void setCantidad(string nombre,int cantidad);
+        void agregar(string nombre, int cantidad);
         Turupizza();
         virtual ~Turupizza();
     protected:

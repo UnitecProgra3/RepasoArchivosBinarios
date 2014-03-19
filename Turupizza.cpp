@@ -64,3 +64,33 @@ void Turupizza::imprimir()
     }
 
 }
+
+void Turupizza::agregar(string nombre, int cantidad)
+{
+    pizzas.push_back(new Pizza(nombre,cantidad));
+}
+
+int Turupizza::getCantidad(string nombre)
+{
+    for(list<Pizza*>::iterator i=pizzas.begin();
+        i!=pizzas.end();
+        i++)
+    {
+        Pizza* temp=*i;
+        if(temp->nombre==nombre)
+            return temp->cantidad;
+    }
+    return 0;
+}
+
+void Turupizza::setCantidad(string nombre,int cantidad)
+{
+    for(list<Pizza*>::iterator i=pizzas.begin();
+        i!=pizzas.end();
+        i++)
+    {
+        Pizza* temp=*i;
+        if(temp->nombre==nombre)
+            temp->cantidad=cantidad;
+    }
+}
