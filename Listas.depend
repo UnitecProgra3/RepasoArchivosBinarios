@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1395167097 source:/home/turupawn/Projects/Codeblocks/Archivos/main.cpp
+1395251815 source:/home/turupawn/Projects/Codeblocks/Archivos/main.cpp
 	<iostream>
 	<list>
 	<fstream>
+	"Pizza.h"
+	"Turupizza.h"
 
 1391710076 /home/turupawn/Projects/Codeblocks/Archivos/Nodo.h
 
@@ -26,4 +28,20 @@
 
 1392142280 source:/home/turupawn/Projects/Codeblocks/Archivos/NodoDoble.cpp
 	"NodoDoble.h"
+
+1395251443 /home/turupawn/Projects/Codeblocks/Archivos/Pizza.h
+	<string>
+
+1395251389 source:/home/turupawn/Projects/Codeblocks/Archivos/Pizza.cpp
+	"Pizza.h"
+
+1395251714 source:/home/turupawn/Projects/Codeblocks/Archivos/Turupizza.cpp
+	"Turupizza.h"
+
+1395251836 /home/turupawn/Projects/Codeblocks/Archivos/Turupizza.h
+	<list>
+	<string>
+	<fstream>
+	<iostream>
+	"Pizza.h"
 

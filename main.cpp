@@ -1,6 +1,8 @@
 #include <iostream>
 #include <list>
 #include <fstream>
+#include "Pizza.h"
+#include "Turupizza.h"
 using namespace std;
 
 //class A
@@ -15,73 +17,14 @@ using namespace std;
 //    }
 //};
 
-class Pizza
-{
-public:
-    string nombre;
-    int cantidad;
-    Pizza(string nombre,int cantidad)
-    {
-        this->nombre=nombre;
-        this->cantidad=cantidad;
-    }
-};
-
-void escribirPizzas(list<Pizza*>pizzas)
-{
-    ofstream o("turupizza",ios::binary);
-
-    for(list<Pizza*>::iterator i=pizzas.begin();
-        i!=pizzas.end();
-        i++)
-    {
-        const char* nombre = (*i)->nombre.c_str();
-        int* cantidad = new int ((*i)->cantidad);
-        o.write(nombre,20);
-        o.write((char*)cantidad,4);
-    }
-
-    o.close();
-}
-
-list<Pizza*> leerPizzas()
-{
-    ifstream i("turupizza",ios::binary);
-    list<Pizza*>pizzas;
-
-    for(int x=0;x<2;x++)
-    {
-        char *nombre_leido=new char[20];
-        int *cantidad_leida=new int(0);
-        i.read(nombre_leido,20);
-        i.read((char*)cantidad_leida,4);
-//        cout<<nombre_leido<<endl;
-//        cout<<*cantidad_leida<<endl;
-
-        string nombre = nombre_leido;
-        int cantidad = *cantidad_leida;
-        pizzas.push_back(new Pizza(nombre,cantidad));
-    }
-
-
-    return pizzas;
-
-//    i.close();
-}
-
 int main()
 {
-    list<Pizza*>pizzas;
-    pizzas.push_back(new Pizza("Napolitana",6));
-    pizzas.push_back(new Pizza("Margarita",5));
-
-    escribirPizzas(pizzas);
-
-    list<Pizza*>pizzas2 = leerPizzas();
-
-    cout<<(*pizzas2.begin())->nombre<<endl;
-    cout<<(*pizzas2.begin())->cantidad;
-
+    Turupizza t;
+    t.pizzas.push_back(new Pizza("Margarita",2));
+    t.pizzas.push_back(new Pizza("Napolitana",4));
+    t.escribir();
+    t.leer();
+    t.imprimir();
 
 
 
